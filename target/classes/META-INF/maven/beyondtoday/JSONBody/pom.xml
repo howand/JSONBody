@@ -43,6 +43,12 @@
       <scope>test</scope>
     </dependency>
     
+    <dependency>
+    	<groupId>com.github.howand</groupId>
+    	<artifactId>JSONBody</artifactId>
+    	<version>1.0.0</version>
+    </dependency>
+    
   </dependencies>
   
   <repositories>

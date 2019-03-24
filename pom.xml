@@ -35,7 +35,6 @@
         <artifactId>jackson-annotations</artifactId>
         <version>2.9.8</version>
     </dependency>
-	
 
     <dependency>
       <groupId>junit</groupId>
@@ -44,5 +43,18 @@
       <scope>test</scope>
     </dependency>
     
+    <dependency>
+    	<groupId>com.github.howand</groupId>
+    	<artifactId>JSONBody</artifactId>
+    	<version>1.0.0</version>
+    </dependency>
+    
   </dependencies>
+  
+  <repositories>
+	<repository>
+	    <id>jitpack.io</id>
+	    <url>https://jitpack.io</url>
+	</repository>
+  </repositories>
 </project>
