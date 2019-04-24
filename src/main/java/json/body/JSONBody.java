@@ -3,10 +3,11 @@ package json.body;
 import java.time.LocalDateTime;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Builder;
+import lombok.Getter;
 
 @JsonInclude(Include.NON_NULL)
 public class JSONBody<T> {
@@ -15,6 +16,7 @@ public class JSONBody<T> {
 	private HeaderData headerData;
 	
 	@JsonProperty("order_data")
+	@Getter
 	private T order;
 	
 	@JsonProperty("exception")
