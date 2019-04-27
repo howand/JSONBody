@@ -15,17 +15,17 @@ public class JSONBody<T> {
 	@JsonProperty("header")
 	private HeaderData headerData;
 	
-	@JsonProperty("order_data")
+	@JsonProperty("data")
 	@Getter
-	private T order;
+	private T data;
 	
 	@JsonProperty("exception")
 	private ExceptionInformation exceptionInformation;
 	
 	@Builder
-	public JSONBody (T orders, ExceptionInformation exceptionInformation) {
-		this.headerData = HeaderData.builder().timestamp(LocalDateTime.now()).containsOrderData(orders != null).containsErrors(exceptionInformation != null).build();
-		this.order = orders;
+	public JSONBody (T data, ExceptionInformation exceptionInformation) {
+		this.headerData = HeaderData.builder().timestamp(LocalDateTime.now()).containsOrderData(data != null).containsErrors(exceptionInformation != null).build();
+		this.data = data;
 		this.exceptionInformation = exceptionInformation;
 	}
 }
